@@ -5,15 +5,15 @@
         <title>集-tsudoi-</title>
         <script defer="defer" src="/tsudoi-hp/static/js/main.9ef7d280.js"></script>
         <link href="/tsudoi-hp/static/css/main.d440b10b.css" rel="stylesheet">
+        <script>
+            const path = sessionStorage.getItem('path');
+            console.log(path);
+            if (path && path === '/react-from-meta-lang/other') {
+              sessionStorage.removeItem('path');
+              window.history.replaceState(null, null, './other');
+            }
+        </script>
     </head>
-    <script>
-        const path = sessionStorage.getItem('path');
-        console.log(path);
-        if (path && path === '/react-from-meta-lang/other') {
-          sessionStorage.removeItem('path');
-          window.history.replaceState(null, null, './other');
-        }
-    </script>
     <body>
         <div id="root"></div>
     </body>
