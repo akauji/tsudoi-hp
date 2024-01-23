@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <title>集-tsudoi-</title>
   </head>
+  <script>
+    const path = sessionStorage.getItem('path');
+    console.log(path);
+    if (path && path === '/react-from-meta-lang/other') {
+      sessionStorage.removeItem('path');
+      window.history.replaceState(null, null, './other');
+    }
+  </script>
   <body>
     <div id="root"></div>
   </body>
